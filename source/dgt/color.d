@@ -31,8 +31,7 @@ struct Color
 
 	void print() const
 	{
-        import core.stdc.stdio;
-		printf("Color(%f, %f, %f, %f)", r, g, b, a);
+		dgt.io.print("Color(", r, ", ", g, ", ", b, ", ", a, ")");
 	}
 
 	pure:
