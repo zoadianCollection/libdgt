@@ -60,7 +60,7 @@ The project is written in D to take advantage of its ability for both low and hi
 - Testing
 	- [ ] Animation
 	- [x] Array
-	- [ ] Color
+	- [x] Color
 	- [ ] Font
 	- [ ] Gamepad
 	- [x] Geometry
