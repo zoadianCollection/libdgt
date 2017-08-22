@@ -76,3 +76,12 @@ struct Texture
     int getSourceHeight() { return height; }
     Rectangle!int getRegion() { return region; }
 }
+
+unittest
+{
+    import dgt;
+    WindowConfig config;
+	config.resizable = true;
+	Window window = new Window("Test title", 640, 480, config);
+    auto invalid = Texture("invalid filename");
+}
