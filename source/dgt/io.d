@@ -18,11 +18,6 @@ void print(string value)
     printf("%s", value.ptr);
 }
 
-void print(const(char)* value)
-{
-    printf("%s", value);
-}
-
 void print(T)(const(T) obj)
 {
     obj.print();
