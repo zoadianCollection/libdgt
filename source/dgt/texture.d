@@ -83,5 +83,18 @@ unittest
     WindowConfig config;
 	config.resizable = true;
 	Window window = new Window("Test title", 640, 480, config);
+    auto texture = Texture("test.png");
+    auto region = Rectanglei(2, 2, 16, 16);
+    auto slice = texture.getSlice(region);
+    assert(slice.getRegion.x == 2 && slice.getRegion.y == 2
+        && slice.getRegion.width == 16 && slice.getRegion.height == 16);
+}
+
+unittest
+{
+    import dgt;
+    WindowConfig config;
+	config.resizable = true;
+	Window window = new Window("Test title", 640, 480, config);
     auto invalid = Texture("invalid filename");
 }
