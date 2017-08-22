@@ -48,8 +48,11 @@ struct Texture
         SDL_Surface* surface = IMG_Load(name.ptr);
         if (surface == null)
             println("Texture with filename ", name, " not found");
-        loadFrom(surface);
-        SDL_FreeSurface(surface);
+        else
+        {
+            loadFrom(surface);
+            SDL_FreeSurface(surface);
+        }
     }
 
     this(SDL_Surface* sur)
