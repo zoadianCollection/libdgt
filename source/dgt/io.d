@@ -13,11 +13,6 @@ void print(double value)
     printf("%f", value);
 }
 
-void print(string value)
-{
-    printf("%s", value.ptr);
-}
-
 void print(T)(const(T) obj)
 {
     obj.print();
@@ -33,6 +28,11 @@ void print(T)(const(T[]) items)
             print(", ");
     }
     print("]");
+}
+
+void print(T:char)(const(T[]) items)
+{
+    printf("%s", items.ptr);
 }
 
 void print(T, A...)(const(T) obj, const(A) a)
