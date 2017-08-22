@@ -7,7 +7,7 @@ import dgt.color : Color;
 import dgt.geom;
 import dgt.io;
 
-string vertex_shader = "#version 130
+string DEFAULT_VERTEX_SHADER = "#version 130
 in vec2 position;
 in vec2 tex_coord;
 in vec4 color;
@@ -21,7 +21,7 @@ void main() {
 	transformed.z = 0;
 	gl_Position = vec4(transformed, 1.0);
 }";
-string fragment_shader = "#version 130
+string DEFAULT_FRAGMENT_SHADER = "#version 130
 in vec4 Color;
 in vec2 Tex_coord;
 out vec4 outColor;
@@ -71,7 +71,7 @@ struct GLBackend
 		glBindVertexArray(vao);
 		glGenBuffers(1, &vbo);
 		glGenBuffers(1, &ebo);
-		setShader(vertex_shader, fragment_shader);
+		setShader(DEFAULT_VERTEX_SHADER, DEFAULT_FRAGMENT_SHADER);
 		glEnable (GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		vertices = Array!float(1024);
