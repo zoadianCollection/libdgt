@@ -64,7 +64,7 @@ The project is written in D to take advantage of its ability for both low and hi
 	- [ ] Font
 	- [ ] Gamepad
 	- [x] Geometry
-	- [ ] OpenGL Backend
+	- [x] OpenGL Backend
 	- [x] IO
 	- [ ] Level
 	- [ ] Music
